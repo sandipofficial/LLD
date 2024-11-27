@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.LinkedList;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -8,6 +9,7 @@ public class Main {
 
         //ArrayList --> concrete class
         ArrayList<Integer> list = new ArrayList<>();
+        List<Integer> list1 = new LinkedList<>();
 //        List<Integer> list = new ArrayList<>();
         Collection<Integer> coll = new ArrayList<>();
         coll.add(30);
@@ -43,7 +45,7 @@ public class Main {
 
         //removeAll
 //        System.out.println("RemoveAll");
-//        list.removeAll(coll);
+//        list.removeAll();
 //        System.out.println(list);
 //        System.out.println(coll);
 
@@ -78,8 +80,16 @@ public class Main {
         ArrayList<Integer> newList = (ArrayList<Integer>) list.clone();
         System.out.println("new list"+newList);
 
-        System.out.println("hi");
+        //ensureCapacity
+        ArrayList<Integer> marks = new ArrayList<>();
+        marks.ensureCapacity(100);
+        //isEmpty
+        System.out.println(marks.isEmpty());
 
+        //indexOf --> if two values are same then it will return index of first value
+        newList.add(40);
+        System.out.println(newList);
+        System.out.println(newList.indexOf(40));
 
     }
 }
